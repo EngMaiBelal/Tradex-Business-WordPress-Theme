@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css" type="text/css" >
+
+</head>
+<body>
+         <!-- /*StartNavbar*/ -->
+         <div class="sticky-top navbar-light bg-light">
+            <div class="container">
+                <nav class=" navbar navbar-expand-lg">
+                    <div class="d-flex justify-content-between row">
+                        <div class="d-flex justify-content-between col-md-2 col-3">
+                            <a class="navbar-brand " href="#"><img src="assets/images/Trade-X-Logo.png" alt=""/></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse col-md-7 col-6 " id="navbarNavDropdown">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item active  menu-item pr-1">
+                                    <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        Home <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="index.html">Home</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                    
+    
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"> ABOUT</a>
+                                </li>
+                    
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        HEADERS <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            
+    
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        BLOG POST <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                
+                                <li class="nav-item menu-item">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        SERVICES <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pr-1 menu-item">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        Pages <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pr-1 menu-item">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                                        Design <span class="sr-only">(current)</span>
+                                    </a>
+                                    <div class=" dropdown2" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="form.html"> CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <section class="banner2 py-1 bg-footer" >
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-md-12 col-12 d-flex text-center mt-5">
+                       
+                        <h2 class="h1 text-white text-center pl-5"> Welcome</h2>
+                    </div>
+                    <div class="col-md-12 col-xl-6 col-12 d-flex justify-content-around">
+
+                        <form id="myform" method="post" onsubmit="validateForm(event)" method="">
+
+                            <input type="text" name="name" id="username" placeholder="YOUR NAME" class="collect px-4 py-2 border__radius mb-2" onfocus="this.style.border='2px solid blue';this.style.outline='0px'" onblur="validateUserName(this)">
+                            <small id="userValidator"></small>
+            
+                            <input name="email" id="email" placeholder="YOUR EMAIL ADDRESS" class="collect px-4 py-2 border__radius mb-2" onfocus="this.style.border='2px solid blue';this.style.outline='0px'" onblur="validateEmail(this)">
+                            <small id="emailValidator"></small>
+                            
+                            <input name="mobile" id="mobile" placeholder="Mobile" class="collect px-4 py-2 border__radius mb-2" onfocus="this.style.border='2px solid blue';this.style.outline='0px'" onblur="validateMobile(this)">
+                            <small id="MobileValidator"></small>
+                            
+                            <input type="password" name="password" id="password" placeholder="PASSWORD" class="collect px-4 py-2 border__radius mb-2" onfocus="this.style.border='2px solid blue';this.style.outline='0px'" onblur="validatePassword(this)">
+                            <small id="PasswordValidator"></small>
+                            
+                            <input disabled type="password" name="confirm-password" id="confirm-password" placeholder="CONFIRM PASSWORD" class="collect px-4 py-2 border__radius mb-2" autocomplete="off" onfocus="this.style.border='2px solid blue';this.style.outline='0px'" onblur="confirmPassword(this)">
+                            <small id="PasswordConfirm"></small>
+                            
+                            <input type="submit" name="button" value="SEND MESSAGE" id="btn" class="btn-custom btncolor__main text-white px-4 py-2 border-0 d-block">
+                            <small id="FormValid"></small>
+                    
+                        </form>
+                    </div>
+                    <div class="col-md-12 col-xl-6 col-12 d-flex text-center mt-5">
+                        <i class="far fa-envelope text-white h1 px-3"></i>
+                        <h2 class="h1 text-white"> Subscribe now for news</h2>
+                    </div>
+
+            </div>
+        </div>
+        </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0,          // default
+            mobile:       true,       // default
+            live:         true        // default
+        }
+        )
+        wow.init();
+    </script>
+    <script src="assets/js/myscript.js"></script>
+</body>
+</html>
